@@ -17,13 +17,9 @@
             --dark: #1a1a1a;
             --white: #ffffff;
             --gray: #666;
-            --light-gray: #f8f9fa; 
+            --light-gray: #f8f9fa;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
@@ -37,7 +33,7 @@
             background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 15px 0;
+            padding: 10px 0;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
@@ -52,14 +48,18 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--primary-green);
         }
         .logo img {
-            height: 50px;
-            width: auto;
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .nav-links {
             display: flex;
@@ -130,14 +130,14 @@
             margin: 0 auto 30px;
             border-radius: 50%;
             background: var(--white);
-            padding: 10px;
+            padding: 8px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             animation: float 3s ease-in-out infinite;
         }
         .hero-logo img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 50%;
         }
         @keyframes float {
@@ -383,6 +383,12 @@
             justify-content: center;
             font-size: 4rem;
             color: var(--white);
+            overflow: hidden;
+        }
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .team-info {
             padding: 25px;
@@ -449,6 +455,11 @@
             font-size: 5rem;
             position: relative;
             overflow: hidden;
+        }
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .product-img::before {
             content: attr(data-product);
@@ -847,47 +858,13 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--dark-green);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s;
-        }
-        .loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .loader-content {
-            text-align: center;
-        }
-        .loader-logo {
-            width: 120px;
-            height: 120px;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
     </style>
 </head>
 <body>
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div style="width:120px; height:120px; background:linear-gradient(135deg, #4CAF50, #D4A017); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:2rem; font-weight:bold;">EC</div>
-            <p style="color: var(--light-gold); margin-top: 20px; font-size: 1.2rem;">From Waste to Worth...</p>
-        </div>
-    </div>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo">
+                <img src="ecoglow-logo.png" alt="EcoGlow Creations">
                 <span>EcoGlow</span>
             </div>
             <ul class="nav-links" id="navLinks">
@@ -909,7 +886,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-logo">
-                <div style="width:100%;height:100%;background:linear-gradient(135deg,#4CAF50,#D4A017);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;font-weight:bold;">EC</div>
+                <img src="ecoglow-logo.png" alt="EcoGlow Creations">
             </div>
             <h1>EcoGlow Creations</h1>
             <p class="slogan">FROM WASTE TO WORTH</p>
@@ -952,8 +929,8 @@
             <p class="section-subtitle fade-in">From discarded bottle caps and paper cartons to beautiful classroom essentials</p>
             <div class="transformation-grid">
                 <div class="transformation-card fade-in">
-                    <div class="transformation-img" style="background: linear-gradient(135deg, var(--light-green), var(--primary-green)); display: flex; align-items: center; justify-content: center; font-size: 5rem; color: var(--white);">
-                        <i class="fas fa-recycle"></i>
+                    <div class="transformation-img">
+                        <img src="team-photo.png" alt="EcoGlow Team collecting materials">
                     </div>
                     <div class="transformation-content">
                         <div class="step-number">01</div>
@@ -1025,7 +1002,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600" alt="Sierra Leone recycling" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text fill=%22%23666%22 font-family=%22sans-serif%22 font-size=%2220%22 x=%2250%22 y=%22150%22>Sierra Leone Waste Management</text></svg>'">
+                    <img src="team-photo.png" alt="EcoGlow Team at Work">
                 </div>
                 <div class="about-content fade-in">
                     <h2>Our Mission</h2>
@@ -1047,7 +1024,9 @@
             <h2 class="section-title fade-in">Leadership Team</h2>
             <div class="team-grid">
                 <div class="team-card fade-in">
-                    <div class="team-img"><i class="fas fa-lightbulb"></i></div>
+                    <div class="team-img">
+                        <img src="team-photo.png" alt="David Solomon Cole" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
                     <div class="team-info">
                         <h3>David Solomon Cole</h3>
                         <p class="role">Chief Innovation Officer & Product Designer</p>
@@ -1059,7 +1038,9 @@
                     </div>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-img"><i class="fas fa-tasks"></i></div>
+                    <div class="team-img">
+                        <img src="team-photo.png" alt="Ansumana Conteh" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
                     <div class="team-info">
                         <h3>Ansumana Conteh</h3>
                         <p class="role">Product Manager</p>
@@ -1071,7 +1052,9 @@
                     </div>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-img"><i class="fas fa-truck"></i></div>
+                    <div class="team-img">
+                        <img src="team-photo.png" alt="Francis Lebron Teh" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
                     <div class="team-info">
                         <h3>Francis Lebron Teh</h3>
                         <p class="role">Chief Procurement Officer</p>
@@ -1083,7 +1066,9 @@
                     </div>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-img"><i class="fas fa-chart-line"></i></div>
+                    <div class="team-img">
+                        <img src="team-photo.png" alt="Hawanatu Sesay" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
                     <div class="team-info">
                         <h3>Hawanatu Sesay</h3>
                         <p class="role">Chief Finance Officer</p>
@@ -1095,7 +1080,9 @@
                     </div>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-img"><i class="fas fa-bullhorn"></i></div>
+                    <div class="team-img">
+                        <img src="team-photo.png" alt="Hassan Jalloh" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
                     <div class="team-info">
                         <h3>Hassan Jalloh</h3>
                         <p class="role">Marketing Manager</p>
@@ -1370,83 +1357,78 @@
     </footer>
     <script>
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-n        const navLinks = document.getElementById('navLinks');
-n        mobileMenuBtn.addEventListener('click', () => {
-n            navLinks.classList.toggle('active');
-n        });
-n        document.querySelectorAll('.nav-links a').forEach(link => {
-n            link.addEventListener('click', () => {
-n                navLinks.classList.remove('active');
-n            });
-n        });
-n        window.addEventListener('scroll', () => {
-n            const navbar = document.getElementById('navbar');
-n            if (window.scrollY > 50) {
-n                navbar.style.padding = '10px 0';
-n                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
-n            } else {
-n                navbar.style.padding = '15px 0';
-n                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-n            }
-n        });
-n        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-n            anchor.addEventListener('click', function(e) {
-n                e.preventDefault();
-n                const target = document.querySelector(this.getAttribute('href'));
-n                if (target) {
-n                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-n                }
-n            });
-n        });
-n        const fadeElements = document.querySelectorAll('.fade-in');
-n        const fadeObserver = new IntersectionObserver((entries) => {
-n            entries.forEach(entry => {
-n                if (entry.isIntersecting) {
-n                    entry.target.classList.add('visible');
-n                }
-n            });
-n        }, { threshold: 0.1 });
-n        fadeElements.forEach(el => fadeObserver.observe(el));
-n        const counters = document.querySelectorAll('.impact-number');
-n        const counterObserver = new IntersectionObserver((entries) => {
-n            entries.forEach(entry => {
-n                if (entry.isIntersecting) {
-n                    const target = parseInt(entry.target.getAttribute('data-target'));
-n                    const duration = 2000;
-n                    const step = target / (duration / 16);
-n                    let current = 0;
-n                    const timer = setInterval(() => {
-n                        current += step;
-n                        if (current >= target) {
-n                            entry.target.textContent = target.toLocaleString();
-n                            clearInterval(timer);
-n                        } else {
-n                            entry.target.textContent = Math.floor(current).toLocaleString();
-n                        }
-n                    }, 16);
-n                    counterObserver.unobserve(entry.target);
-n                }
-n            });
-n        }, { threshold: 0.5 });
-n        counters.forEach(counter => counterObserver.observe(counter));
-n        const collectionForm = document.getElementById('collectionForm');
-n        const formSuccess = document.getElementById('formSuccess');
-n        collectionForm.addEventListener('submit', (e) => {
-n            e.preventDefault();
-n            collectionForm.style.display = 'none';
-n            formSuccess.style.display = 'block';
-n        });
-n        const contactForm = document.getElementById('contactForm');
-n        contactForm.addEventListener('submit', (e) => {
-n            e.preventDefault();
-n            alert('Thank you for your message! We will get back to you soon.');
-n            contactForm.reset();
-n        });
-n        window.addEventListener('load', () => {
-n            setTimeout(() => {
-n                document.getElementById('loader').classList.add('hidden');
-n            }, 1500);
-n        });
-n    </script>
+        const navLinks = document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '10px 0';
+                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.padding = '10px 0';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => fadeObserver.observe(el));
+        const counters = document.querySelectorAll('.impact-number');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            entry.target.textContent = target.toLocaleString();
+                            clearInterval(timer);
+                        } else {
+                            entry.target.textContent = Math.floor(current).toLocaleString();
+                        }
+                    }, 16);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+        const collectionForm = document.getElementById('collectionForm');
+        const formSuccess = document.getElementById('formSuccess');
+        collectionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            collectionForm.style.display = 'none';
+            formSuccess.style.display = 'block';
+        });
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
 </body>
 </html>
