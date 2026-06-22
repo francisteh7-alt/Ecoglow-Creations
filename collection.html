@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoGlow Creations - Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="assets/EcoGlow home page logo.png" alt="EcoGlow Creations">
+      <span>EcoGlow</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="problem.html">Problem</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="collection.html">Collect</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<section class="banner">
+  <div class="container">
+    <h1>Waste Collection</h1>
+    <p>Join the collection network by sending recyclable materials from your classroom, hostel, or office.</p>
+    <div class="crumbs">Home / Collect</div>
+  </div>
+</section>
+
+<section class="section white-section">
+  <div class="container">
+    <h2 class="section-title fade-in">What We Collect</h2>
+    <div class="grid-3">
+      <div class="card problem-card fade-in"><div class="problem-icon"><i class="fas fa-wine-bottle"></i></div><h3>Plastic Bottles</h3><p>Clean bottles that can be processed and reused in project work.</p></div>
+      <div class="card problem-card fade-in"><div class="problem-icon"><i class="fas fa-circle"></i></div><h3>Bottle Caps</h3><p>Caps of different colors for decorative patterns and craft designs.</p></div>
+      <div class="card problem-card fade-in"><div class="problem-icon"><i class="fas fa-box"></i></div><h3>Cartons & Packaging</h3><p>Paper-based materials used as strong product bases and organizers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section light-section">
+  <div class="container">
+    <h2 class="section-title fade-in">Collection Request</h2>
+    <div class="form-container fade-in">
+      <form id="collectionForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Institution / Department</label>
+            <input type="text" placeholder="School or office" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+232..." required>
+          </div>
+          <div class="form-group">
+            <label>Preferred Pickup Day</label>
+            <input type="date" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Type of Materials</label>
+          <select required>
+            <option value="">Select material type</option>
+            <option value="plastic">Plastic bottles and caps</option>
+            <option value="cartons">Cartons and packaging</option>
+            <option value="mixed">Mixed recyclables</option>
+            <option value="donation">Donate to Classroom Fund</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Additional Notes</label>
+          <textarea rows="4" placeholder="Any special instructions or questions."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Collection Request</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <i class="fas fa-check-circle"></i>
+        <h3>Thank You!</h3>
+        <p>Your collection request has been received. Our team will contact you within 24 hours to arrange pickup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>EcoGlow Creations</h3>
+        <p>Turning bottle caps, cartons, and classroom waste into practical products that improve hygiene, beauty, and sustainability across Sierra Leone.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="products.html">Campus Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="collection.html">Campus Collection</a></li>
+          <li><a href="impact.html">Impact & Outreach</a></li>
+          <li><a href="process.html">Production Process</a></li>
+          <li><a href="contact.html">Partnerships</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Values</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-recycle"></i> Recycle</a></li>
+          <li><a href="#"><i class="fas fa-redo"></i> Reuse</a></li>
+          <li><a href="#"><i class="fas fa-hammer"></i> Create</a></li>
+          <li><a href="#"><i class="fas fa-heart"></i> Inspire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EcoGlow Creations. All Rights Reserved. | From Waste to Worth</p>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
